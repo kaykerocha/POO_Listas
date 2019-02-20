@@ -1,5 +1,6 @@
 package l01_exe05;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exe05 {
@@ -25,6 +26,38 @@ public class Exe05 {
         md = md/n;
         System.out.println("Menor: "+me);
         System.out.println("Maior: "+ma);
-        System.out.println("Média: "+md);
+        DecimalFormat df = new DecimalFormat("0.000");//decimal format
+        System.out.println("Média: "+df.format(md));
+        
+        String c ="";
+        
+        for (int i = 0; i < n-1; i++) {
+            if (l[i] <= l[i+1]) {
+                c = "cre";
+            }else{
+                c = "ale";
+                break;
+            }
+        }       
+        if (c.equals("ale")) {
+            for (int i = 0; i < n-1; i++) {
+                if (l[i] >= l[i+1]) {
+                    c = "dec";
+                }else{
+                    c = "ale";
+                    break;
+                }
+            }
+        }
+        
+        System.out.println(c);
+        if (c.equals("cre")) {
+            System.out.println("Crescente");
+        } else if (c.equals("dec")) {
+            System.out.println("Decrescente");
+        }else{
+            System.out.println("Aleatório");
+        }
+        
     }
 }
