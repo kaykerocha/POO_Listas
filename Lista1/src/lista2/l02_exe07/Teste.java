@@ -4,6 +4,19 @@ import java.util.ArrayList;
 
 public class Teste {
     
+    public static double[] valores(ArrayList<Departamento> dep){
+        double[] lista = new double[dep.size()];
+        for (int i = 0; i < dep.size(); i++) {
+            for (Produto p : dep.get(i).getProdutos()) {
+                lista[i] = lista[i] + p.getPreco();
+            }
+        }
+//        for (int i = 0; i < lista.length; i++) {
+//            System.out.println(lista[i]);
+//        }
+        return lista;
+    }
+    
     public static void main(String[] args) {
         ArrayList<Departamento> dep = new ArrayList<>();
         
@@ -30,6 +43,8 @@ public class Teste {
                 }
             }
         }
+        
+//        System.out.println(valores(dep));
         
     }
     
