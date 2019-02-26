@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exe05 {
-    
+    //asdsadasd
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine());
